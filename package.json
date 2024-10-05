@@ -1,0 +1,22 @@
+{
+  "name": "playwrightassigment",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "test": "npx playwright test tests/step_definitions/PoleStar.spec.js",
+    
+     "allureReport": "allure generate ./allure-results -o ./allure-report --clean && allure open ./allure-report"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "description": "",
+  "devDependencies": {
+    "@playwright/test": "^1.47.2",
+    "@types/node": "^22.7.4",
+    "allure-playwright": "^3.0.4"
+  },
+  "dependencies": {
+    "chai": "^5.1.1"
+  }
+}
