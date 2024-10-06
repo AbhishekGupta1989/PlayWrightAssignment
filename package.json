@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "main": "index.js",
   "scripts": {
-    "test": "npx playwright test tests/step_definitions/PoleStar.spec.js",
+    "test": "npx playwright test tests/step_definitions/APITest.spec.js",
     
      "allureReport": "allure generate ./allure-results -o ./allure-report --clean && allure open ./allure-report"
   },

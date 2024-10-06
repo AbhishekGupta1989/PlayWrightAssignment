@@ -26,3 +26,8 @@ test("Validate home page menu options",async function(){
 await Obj_homePage.validateHomePageMenuLinks();
 
 })
+
+test("Login",async function(){
+
+    await Obj_homePage.login();
+})

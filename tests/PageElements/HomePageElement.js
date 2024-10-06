@@ -9,7 +9,11 @@ homepage:{
     locate_polestar3_link:"//button[@id='mega-menu-:r6:-secondary-navigation-control-1']",
     locate_polestar4_link:"//button[@id='mega-menu-:r6:-secondary-navigation-control-2']",
     locate_shopping_tools:"//button[@id='mega-menu-:r6:-secondary-navigation-control-3']",
-    locate_more_link:"//button[@id='mega-menu-:r6:-secondary-navigation-control-4']"
+    locate_more_link:"//button[@id='mega-menu-:r6:-secondary-navigation-control-4']",
+    locate_login_btn:"//a[@id='L_aKvtA0TE-V7FLPcm1OLQ']",
+    locate_Email_inputBx:"//input[@id='email-username-field']",
+    locate_password_inputBx:"//input[@id='password-field']",
+    locate_loginSubmit_Btn:"//button[@id='login-btn']"
     
 
 

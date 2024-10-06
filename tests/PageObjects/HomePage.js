@@ -3,6 +3,7 @@ const { chromium } = require('playwright');
 const homepageElement=require("../PageElements/HomePageElement");
 const HomePageElement = require('../PageElements/HomePageElement');
 const Logger = require('../Helper/Logger')
+const loginData = require('../Testdata/login.json')
 
     let browser;
     let context;
@@ -14,7 +15,7 @@ const Logger = require('../Helper/Logger')
         page = await context.newPage();
     });
     test.afterAll(async () => {
-        await global.browser.close();
+        await browser.close();
     })
 
 class HomePage {
@@ -60,6 +61,15 @@ class HomePage {
         } else {
             Logger.warn("Some Home Page links are not visible");
         }
+    }
+
+    async login()
+    {
+        await page.locator(homepageElement.homepage.locate_login_btn).click();
+        await page.locator(homepageElement.homepage.locate_Email_inputBx).type(loginData.login.Email_id);
+        await page.locator(homepageElement.homepage.locate_password_inputBx).type(loginData.login.password);
+        await page.locator(homepageElement.homepage.locate_loginSubmit_Btn).click();
+
     }
     
 
