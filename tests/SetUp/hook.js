@@ -1,11 +1,13 @@
-const { test, expect } = require('@playwright/test');
 const { chromium } = require('playwright'); 
 
+var page;
 beforeAll(async () => {
     global.browser = await chromium.launch({ headless: false });
     global.context = await global.browser.newContext();
-    page = await global.context.newPage();
+    global.page = await global.context.newPage();
+    global.page=page;
 });
 afterAll(async () => {
     await global.browser.close();
 })
+module.exports = { page };
